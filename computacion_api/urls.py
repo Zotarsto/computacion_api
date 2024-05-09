@@ -21,6 +21,9 @@ from computacion_api.views import auth
 #Importaciones para alumno y maestros 
 from computacion_api.views import alumnos
 from computacion_api.views import maestros
+from computacion_api.views import materias
+
+
 
 urlpatterns = [
     #Version
@@ -43,6 +46,13 @@ urlpatterns = [
        path('lista-maestro/', maestros.MaestrosAll.as_view()),   
     #Edit Maestro
         path('maestros-edit/', maestros.MaestrosViewEdit.as_view()),
+    #Create Materias
+        path('materias/', materias.MateriasView.as_view()),
+    #Lista de Materias
+        path('lista-materias/', materias.MateriasAll.as_view()),
+    #Editar Materias
+        path('materias-edit/', materias.MateriasViewEdit.as_view()),
+        
     #Login
         path('token/', auth.CustomAuthToken.as_view()),
     #Logout
