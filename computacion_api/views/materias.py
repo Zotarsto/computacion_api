@@ -42,7 +42,6 @@ class MateriasAll(generics.CreateAPIView):
 
         return Response(materias, 200)
 
-#Esta clase permite 
 class MateriasView(generics.CreateAPIView):
     #Obtener usuario por ID
     # permission_classes = (permissions.IsAuthenticated,)
